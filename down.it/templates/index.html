@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YouTube Downloader</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css">
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <div class="container">
+    <h2><i class='bx bx-download'></i> YouTube Downloader</h2>
+    <form method="post" action="/download" onsubmit="startAnimation()">
+      <input type="text" name="url" placeholder="Paste YouTube URL" required>
+      <select name="quality">
+        <option value="bestaudio" selected>Audio Only</option>
+        <option value="bestvideo[height<=720]+bestaudio/best">720p</option>
+        <option value="bestvideo[height<=1080]+bestaudio/best">1080p</option>
+        <option value="bestvideo[height<=2160]+bestaudio/best">4K</option>
+      </select>
+      <button type="submit"><i class='bx bx-cloud-download'></i> Download</button>
+    </form>
+    <div id="animation" class="loader hidden"></div>
+  </div>
+  <audio id="sciFiSound" src="/static/sci-fi.mp3" preload="auto"></audio>
+  <script src="/static/script.js"></script>
+</body>
+</html>
