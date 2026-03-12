@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>YouTube Downloader</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+  <div class="bg-white p-8 rounded-xl shadow-md w-full max-w-lg">
+    <h2 class="text-2xl font-bold mb-4 text-center">🎬 YouTube Downloader</h2>
+    <form method="post" action="/download">
+      <input type="text" name="url" placeholder="Paste YouTube URL" required
+             class="w-full border p-2 mb-4 rounded-md focus:outline-none">
+      <select name="quality" class="w-full border p-2 mb-4 rounded-md">
+        <option value="bestvideo[height<=720]+bestaudio/best">720p</option>
+        <option value="bestvideo[height<=1080]+bestaudio/best">1080p</option>
+        <option value="bestvideo[height<=2160]+bestaudio/best">4K</option>
+        <option value="bestaudio">Audio Only</option>
+      </select>
+      <button type="submit"
+              class="w-full bg-red-600 text-white py-2 rounded-md hover:bg-red-700 transition">
+        Download
+      </button>
+    </form>
+  </div>
+</body>
+</html>
